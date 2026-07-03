@@ -1,0 +1,11 @@
+/Volumes/My Files/Projects/Modul-Monolith-DotNet/src/RiverBooks.Books/bin/Debug/net10.0/RiverBooks.Books.deps.json
+/Volumes/My Files/Projects/Modul-Monolith-DotNet/src/RiverBooks.Books/bin/Debug/net10.0/RiverBooks.Books.dll
+/Volumes/My Files/Projects/Modul-Monolith-DotNet/src/RiverBooks.Books/bin/Debug/net10.0/RiverBooks.Books.pdb
+/Volumes/My Files/Projects/Modul-Monolith-DotNet/src/RiverBooks.Books/obj/Debug/net10.0/RiverBooks.Books.GeneratedMSBuildEditorConfig.editorconfig
+/Volumes/My Files/Projects/Modul-Monolith-DotNet/src/RiverBooks.Books/obj/Debug/net10.0/RiverBooks.Books.AssemblyInfoInputs.cache
+/Volumes/My Files/Projects/Modul-Monolith-DotNet/src/RiverBooks.Books/obj/Debug/net10.0/RiverBooks.Books.AssemblyInfo.cs
+/Volumes/My Files/Projects/Modul-Monolith-DotNet/src/RiverBooks.Books/obj/Debug/net10.0/RiverBooks.Books.csproj.CoreCompileInputs.cache
+/Volumes/My Files/Projects/Modul-Monolith-DotNet/src/RiverBooks.Books/obj/Debug/net10.0/RiverBooks.Books.dll
+/Volumes/My Files/Projects/Modul-Monolith-DotNet/src/RiverBooks.Books/obj/Debug/net10.0/refint/RiverBooks.Books.dll
+/Volumes/My Files/Projects/Modul-Monolith-DotNet/src/RiverBooks.Books/obj/Debug/net10.0/RiverBooks.Books.pdb
+/Volumes/My Files/Projects/Modul-Monolith-DotNet/src/RiverBooks.Books/obj/Debug/net10.0/ref/RiverBooks.Books.dll
