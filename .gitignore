@@ -1,0 +1,88 @@
+# Build artifacts
+bin/
+obj/
+
+# Rider
+.idea/
+*.sln.iml
+
+# Visual Studio
+.vs/
+*.user
+*.userosscache
+*.suo
+*.cache
+*.ilk
+*.log
+*.pdb
+*.idb
+*.svclog
+*.tlog
+*.lastbuildstate
+*.dbmdl
+*.dbproj.schemaview
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# NuGet
+*.nupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+**/project.assets.json
+**/project.nuget.cache
+**/project.nuget.dgspec.json
+
+# Dotnet publish
+publish/
+*.Publish.xml
+
+# Visual Studio Code
+.vscode/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono
+*.pidb
+*.mdb
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Rider caches
+.idea/
+*.sln.iml
+
+# Test results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+# JetBrains Rider
+.idea/
+*.sln.DotSettings
+
+# Others
+*.vspscc
+*.vssscc
+
+# Auto generated files
+*.g.cs
+*.g.i.cs
+*.Generated.cs
+*_i.c
+*_p.c
+*_h.h
+
+# environment
+.env
+.env.*
