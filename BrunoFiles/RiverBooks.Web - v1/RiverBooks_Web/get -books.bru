@@ -1,0 +1,50 @@
+meta {
+  name: get /books
+  type: http
+  seq: 1
+  tags: [
+    RiverBooks_Web
+  ]
+}
+
+get {
+  url: {{baseUrl}}/books
+  body: none
+  auth: inherit
+}
+
+example {
+  name: 200 Response
+  description: OK
+  
+  request: {
+    url: {{baseUrl}}/books
+    method: GET
+    mode: none
+  }
+  
+  response: {
+    headers: {
+      Content-Type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        [
+          {
+            "id": "",
+            "title": "",
+            "author": "",
+            "yearPublished": ""
+          }
+        ]
+      '''
+    }
+  }
+}
