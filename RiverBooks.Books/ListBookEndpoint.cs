@@ -19,14 +19,24 @@ internal class ListBookEndpoint(IBookService bookService) : EndpointWithoutReque
         });
     }
 
-    public override Task<ListBooksResponse> ExecuteAsync(CancellationToken cancellationToken = default)
+    // public override Task<ListBooksResponse> ExecuteAsync(CancellationToken cancellationToken = default)
+    // {
+    //     var books = _bookService.ListBooks();
+
+    //     return Task.FromResult(new ListBooksResponse
+    //     {
+    //         Books = books
+    //     });
+    // }
+
+    public override async Task HandleAsync(CancellationToken cancellationToken = default)
     {
         var books = _bookService.ListBooks();
 
-        return Task.FromResult(new ListBooksResponse
+        await Send.OkAsync(new ListBooksResponse()
         {
             Books = books
-        });
+        }, cancellation: cancellationToken);
     }
 
 }
