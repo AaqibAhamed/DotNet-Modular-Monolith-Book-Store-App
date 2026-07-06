@@ -23,7 +23,7 @@ app.UseHttpsRedirection();
 
 app.UseFastEndpoints();
 
-//Map Module Endpoints
-app.MapBookEndpoints();
+// //Map Module Endpoints
+// app.MapBookEndpoints();
 
 app.Run();

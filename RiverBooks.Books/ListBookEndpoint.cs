@@ -3,30 +3,13 @@ using Microsoft.AspNetCore.Builder;
 
 namespace RiverBooks.Books;
 
-public static class BookEndpoints
-{
-    public static void MapBookEndpoints(this WebApplication app)
-    {
-        app.MapGet("/books", (IBookService bookService) =>
-        {
-            return bookService.ListBooks();
-        });
-    }
-
-}
-
-public class ListBooksResponse
-{
-    public List<BookDto> Books { get; set; } = [];
-}
-
 internal class ListBookEndpoint(IBookService bookService) : EndpointWithoutRequest<ListBooksResponse>
 {
     private readonly IBookService _bookService = bookService;
 
     public override void Configure()
     {
-        Get("api/books");
+        Get("/books");
         AllowAnonymous();
         Summary(s =>
         {
