@@ -1,0 +1,17 @@
+<Project>
+  <PropertyGroup>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+      <!-- Treat package vulnerability warnings as warnings -->
+    <WarningsNotAsErrors>NU1903</WarningsNotAsErrors>
+   <!-- if another package introduces a different severity,enable it then restore won't unexpectedly fail.-->
+    <!-- <WarningsNotAsErrors>
+        NU1901;
+        NU1902;
+        NU1903;
+        NU1904
+    </WarningsNotAsErrors> -->
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+</Project>
