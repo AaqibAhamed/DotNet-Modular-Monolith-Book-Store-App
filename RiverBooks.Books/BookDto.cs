@@ -1,5 +1,6 @@
-namespace RiverBooks.Books;
+﻿namespace RiverBooks.Books;
 
-public record BookDto(Guid Id, string Title, string Author, int YearPublished);
+public record BookDto(Guid Id, string Title, string Author, decimal price);
+
 
 

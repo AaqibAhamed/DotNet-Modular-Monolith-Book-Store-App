@@ -5,39 +5,39 @@ namespace RiverBooks.Books;
 
 internal class ListBookEndpoint(IBookService bookService) : EndpointWithoutRequest<ListBooksResponse>
 {
-    private readonly IBookService _bookService = bookService;
+  private readonly IBookService _bookService = bookService;
 
-    public override void Configure()
+  public override void Configure()
+  {
+    Get("/books");
+    AllowAnonymous();
+    Summary(s =>
     {
-        Get("/books");
-        AllowAnonymous();
-        Summary(s =>
-        {
-            s.Summary = "List all books";
-            s.Description = "Returns a list of all books in the system.";
-            s.Response<ListBooksResponse>(200, "List of books");
-        });
-    }
+      s.Summary = "List all books";
+      s.Description = "Returns a list of all books in the system.";
+      s.Response<ListBooksResponse>(200, "List of books");
+    });
+  }
 
-    // public override Task<ListBooksResponse> ExecuteAsync(CancellationToken cancellationToken = default)
-    // {
-    //     var books = _bookService.ListBooks();
+  // public override Task<ListBooksResponse> ExecuteAsync(CancellationToken cancellationToken = default)
+  // {
+  //     var books = _bookService.ListBooks();
 
-    //     return Task.FromResult(new ListBooksResponse
-    //     {
-    //         Books = books
-    //     });
-    // }
+  //     return Task.FromResult(new ListBooksResponse
+  //     {
+  //         Books = books
+  //     });
+  // }
 
-    public override async Task HandleAsync(CancellationToken cancellationToken = default)
+  public override async Task HandleAsync(CancellationToken cancellationToken = default)
+  {
+    var books = await _bookService.ListBooksAsync();
+
+    await Send.OkAsync(new ListBooksResponse()
     {
-        var books = _bookService.ListBooks();
-
-        await Send.OkAsync(new ListBooksResponse()
-        {
-            Books = books
-        }, cancellation: cancellationToken);
-    }
+      Books = books
+    }, cancellation: cancellationToken);
+  }
 
 }
 
