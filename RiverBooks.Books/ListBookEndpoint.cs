@@ -1,5 +1,4 @@
 ﻿using FastEndpoints;
-using Microsoft.AspNetCore.Builder;
 
 namespace RiverBooks.Books;
 
@@ -15,19 +14,9 @@ internal class ListBookEndpoint(IBookService bookService) : EndpointWithoutReque
     {
       s.Summary = "List all books";
       s.Description = "Returns a list of all books in the system.";
-      s.Response<ListBooksResponse>(200, "List of books");
+      s.Response<ListBooksResponse>(200, "List of books", "application/json");
     });
   }
-
-  // public override Task<ListBooksResponse> ExecuteAsync(CancellationToken cancellationToken = default)
-  // {
-  //     var books = _bookService.ListBooks();
-
-  //     return Task.FromResult(new ListBooksResponse
-  //     {
-  //         Books = books
-  //     });
-  // }
 
   public override async Task HandleAsync(CancellationToken cancellationToken = default)
   {
@@ -38,6 +27,16 @@ internal class ListBookEndpoint(IBookService bookService) : EndpointWithoutReque
       Books = books
     }, cancellation: cancellationToken);
   }
+
+  // public override async Task<ListBooksResponse> ExecuteAsync(CancellationToken cancellationToken = default)
+  // {
+  //   var books = await _bookService.ListBooksAsync();
+
+  //   return Task.FromResult(new ListBooksResponse
+  //   {
+  //     Books = books
+  //   });
+  // }
 
 }
 
