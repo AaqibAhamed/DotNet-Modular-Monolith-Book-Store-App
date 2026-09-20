@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="RiverBooks.Books.Test/RiverBooks.Books.Test.csproj" />
   <Project Path="RiverBooks.Books/RiverBooks.Books.csproj" />
   <Project Path="RiverBooks.Web/RiverBooks.Web.csproj" />
 </Solution>
