@@ -24,9 +24,22 @@ The Books module reads the `BooksConnectionString` connection string. It is not 
 
 ```bash
 dotnet user-secrets --project RiverBooks.Web init
+# dotnet user-secrets --project RiverBooks.Web set \
+#   "ConnectionStrings:BooksConnectionString" \
+#   "Server=localhost;Database=RiverBooks;User Id=sa;Password=your-password;TrustServerCertificate=True"
+
+# dotnet user-secrets --project RiverBooks.Web init
 dotnet user-secrets --project RiverBooks.Web set \
   "ConnectionStrings:BooksConnectionString" \
-  "Server=localhost;Database=RiverBooks;User Id=sa;Password=your-password;TrustServerCertificate=True"
+  "Server=tcp:aaqib-dev-sql.database.windows.net,1433;Initial Catalog=Wiki-Azure-SQL;Persist Security Info=False;User ID=sqladmin;Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+
+dotnet user-secrets --project RiverBooks.Web set \
+  "ConnectionStrings:BooksConnectionString" \
+  "Server=tcp:192.168.1.95,1433;Initial Catalog=BookDb-Windows-PC;User Id=sa;Password=asdf;TrustServerCertificate=True;"
+
+
+"BooksConnectionString": "don't recommend putting the real password in appsettings.json -use dotnet user-secrets "
+
 ```
 
 Use a connection string appropriate for your SQL Server installation. Do not commit credentials to the repository.
