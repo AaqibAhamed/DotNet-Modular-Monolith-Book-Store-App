@@ -87,6 +87,9 @@ dotnet ef migrations add 'Initial-Migration' -c BookDbContext -p ../RiverBooks.B
 ```bash
 dotnet ef database update
 ```
+```bash
+ dotnet ef database update -- --environemnt Testing
+```
 
 ## API
 

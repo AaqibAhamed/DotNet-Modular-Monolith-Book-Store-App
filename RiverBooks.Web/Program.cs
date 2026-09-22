@@ -27,3 +27,5 @@ app.UseFastEndpoints();
 // app.MapBookEndpoints();
 
 app.Run();
+
+public partial class Program { } // needed for testing 
