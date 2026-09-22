@@ -16,7 +16,7 @@ Accept: application/json
 Content-Type: application/json
 
 {
-  "id": "b89f6cd8-4693-457b-9009-02205dbbfe47",
+  "id": "b89f6cd7-4693-457b-9009-02205dbbfe47",
   "title": "Modular Monoliths - Getting Started",
   "author": "Steve Smith",
   "price": 29.99
