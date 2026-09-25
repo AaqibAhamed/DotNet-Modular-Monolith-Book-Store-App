@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\RiverBooks.Books\RiverBooks.Books.csproj" />
+    <ProjectReference Include="..\Books Module\RiverBooks.Books\RiverBooks.Books.csproj" />
   </ItemGroup>
 
 </Project>
