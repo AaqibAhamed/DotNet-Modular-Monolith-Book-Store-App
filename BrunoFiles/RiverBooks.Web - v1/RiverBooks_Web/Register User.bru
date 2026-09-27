@@ -1,0 +1,63 @@
+meta {
+  name: Register User
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/users
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "email":"steve@test.com",
+    "password":"Pass@word1"
+  }
+  
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: example
+  
+  request: {
+    url: {{baseUrl}}/users
+    method: POST
+    mode: json
+    body:json: {
+      {
+        "email":"steve@test.com",
+        "password":"Pass@word1"
+      }
+      
+      
+    }
+  }
+  
+  response: {
+    headers: {
+      date: Sun, 27 Sep 2026 11:22:22 GMT
+      server: Kestrel
+      transfer-encoding: chunked
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: text
+      content: '''
+  
+      '''
+    }
+  }
+}

@@ -34,10 +34,15 @@ dotnet user-secrets --project RiverBooks.Web set \
   "Server=tcp:aaqib-dev-sql.database.windows.net,1433;Initial Catalog=Wiki-Azure-SQL;Persist Security Info=False;User ID=sqladmin;Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
 
 dotnet user-secrets --project RiverBooks.Web set \
-  "ConnectionStrings:BooksConnectionString" \
-  "Server=tcp:192.168.1.95,1433;Initial Catalog=BookDb-Windows-PC;User Id=sa;Password=asdf;TrustServerCertificate=True;"
+  "ConnectionStrings:UsersConnectionString" \
+  "Server=tcp:aaqib-dev-sql.database.windows.net,1433;Initial Catalog=Wiki-Azure-SQL;Persist Security Info=False;User ID=sqladmin;Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
 
-dotnet user-secrets set "ConnectionStrings:BooksConnectionString:Password" "mypassword"
+dotnet user-secrets --project RiverBooks.Web set \
+  "ConnectionStrings:BooksConnectionString" \
+  "Server=tcp:192.168.1.95,1433;Initial Catalog=BookDb-Windows-PC;User Id=sa;
+  Password={your_password}; TrustServerCertificate=True;"
+
+dotnet user-secrets set "ConnectionStrings:BooksConnectionString:Password" "{your_password}"
 
 "BooksConnectionString": "don't recommend putting the real password in appsettings.json -use dotnet user-secrets "
 
@@ -86,8 +91,17 @@ dotnet ef migrations add 'Initial-Migration' -c BookDbContext -p ../RiverBooks.B
 ```
 
 ```bash
+dotnet ef migrations add 'Initial-Users' -c UsersDbContext -p ../RiverBooks.Users/RiverBooks.Users.csproj -s ./RiverBooks.Web.csproj -o Data/Migrations
+```
+
+```bash
 dotnet ef database update
 ```
+
+```bash
+dotnet ef database update  -c UsersDbContext
+```
+
 ```bash
  dotnet ef database update -- --environemnt Testing
 ```
