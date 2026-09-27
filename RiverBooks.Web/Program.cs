@@ -1,4 +1,7 @@
 ﻿using FastEndpoints;
+using FastEndpoints.Security;
+using FastEndpoints.Swagger;
+//using Microsoft.Extensions.Configuration.Json;
 using RiverBooks.Books;
 using RiverBooks.Users;
 using Serilog;
@@ -17,7 +20,28 @@ builder.Host.UseSerilog((_, loggerConfig) => loggerConfig.ReadFrom.Configuration
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
-builder.Services.AddFastEndpoints();
+
+var jwtSecret = builder.Configuration["Auth:JwtSecret"]
+    ?? throw new InvalidOperationException("Auth:JwtSecret is not configured.");
+
+#region Verifying Auth:JwtSecret configured or not in appsettings.json
+// var provider = ((IConfigurationRoot)builder.Configuration).Providers
+//     .Reverse()
+//     .FirstOrDefault(p => p.TryGet("Auth:JwtSecret", out _));
+
+// var source = provider is JsonConfigurationProvider json
+//     ? json.Source.Path
+//     : provider?.GetType().Name ?? "not found";
+
+// logger.Information("JWT signing key source: {Source}; configured: {Configured}",
+//     source, true);
+#endregion
+
+builder.Services
+.AddAuthenticationJwtBearer(s => s.SigningKey = jwtSecret)
+.AddAuthorization()
+.SwaggerDocument()
+.AddFastEndpoints();
 
 // Add Module Services
 builder.Services.AddBookServices(builder.Configuration, logger);
@@ -33,7 +57,10 @@ if (app.Environment.IsDevelopment())
 
 //app.UseHttpsRedirection();
 
-app.UseFastEndpoints();
+app.UseAuthentication()
+   .UseAuthorization()
+   .UseFastEndpoints()
+   .UseSwaggerGen();
 
 // //Map Module Endpoints
 // app.MapBookEndpoints();
