@@ -37,6 +37,7 @@ dotnet user-secrets --project RiverBooks.Web set \
   "ConnectionStrings:BooksConnectionString" \
   "Server=tcp:192.168.1.95,1433;Initial Catalog=BookDb-Windows-PC;User Id=sa;Password=asdf;TrustServerCertificate=True;"
 
+dotnet user-secrets set "ConnectionStrings:BooksConnectionString:Password" "mypassword"
 
 "BooksConnectionString": "don't recommend putting the real password in appsettings.json -use dotnet user-secrets "
 

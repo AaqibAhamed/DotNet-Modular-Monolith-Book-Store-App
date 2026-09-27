@@ -8,12 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="FastEndpoints" Version="8.3.0-beta.9" />
-    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.9" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.11" />
+    <PackageReference Include="FastEndpoints" Version="8.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.12" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="../Users Module/RiverBooks.Users/RiverBooks.Users.csproj" />
     <ProjectReference Include="..\Books Module\RiverBooks.Books\RiverBooks.Books.csproj" />
   </ItemGroup>
 
