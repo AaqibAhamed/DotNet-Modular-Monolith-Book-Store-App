@@ -1,4 +1,5 @@
-﻿using FastEndpoints;
+﻿using System.Reflection;
+using FastEndpoints;
 using FastEndpoints.Security;
 using FastEndpoints.Swagger;
 //using Microsoft.Extensions.Configuration.Json;
@@ -44,8 +45,13 @@ builder.Services
 .AddFastEndpoints();
 
 // Add Module Services
-builder.Services.AddBookServices(builder.Configuration, logger);
-builder.Services.AddUserModuleServices(builder.Configuration, logger);
+List<Assembly> mediatRAssemblies = [typeof(Program).Assembly];
+builder.Services.AddBookServices(builder.Configuration, logger, mediatRAssemblies);
+builder.Services.AddUserModuleServices(builder.Configuration, logger, mediatRAssemblies);
+
+// Set up MediatR
+builder.Services.AddMediatR(config =>
+                  config.RegisterServicesFromAssemblies(mediatRAssemblies.ToArray()));
 
 var app = builder.Build();
 
