@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/Books Module/">
+    <Project Path="Books Module/RiverBooks.Books.Contracts/RiverBooks.Books.Contracts.csproj" />
+  </Folder>
   <Folder Name="/Users Module/">
     <Project Path="Users Module/RiverBooks.Users.Tests/RiverBooks.Users.Tests.csproj" />
     <Project Path="Users Module/RiverBooks.Users/RiverBooks.Users.csproj" />

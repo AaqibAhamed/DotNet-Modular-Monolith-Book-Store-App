@@ -91,7 +91,20 @@ dotnet ef migrations add 'Initial-Migration' -c BookDbContext -p ../RiverBooks.B
 ```
 
 ```bash
-dotnet ef migrations add 'Initial-Users' -c UsersDbContext -p ../RiverBooks.Users/RiverBooks.Users.csproj -s ./RiverBooks.Web.csproj -o Data/Migrations
+dotnet ef migrations add 'Initial-Users' -c UsersDbContext -p ../Users Module/RiverBooks.Users/RiverBooks.Users.csproj -s ./RiverBooks.Web.csproj -o Data/Migrations
+```
+
+```bash
+dotnet ef migrations add Cart-Items -c UsersDbContext -p "../Users Module/RiverBooks.Users/RiverBooks.Users.csproj" -s ./RiverBooks.Web.csproj -o Data/Migrations
+```
+OR 
+
+```bash
+dotnet ef migrations add Cart-Items \
+  -c UsersDbContext \
+  -p "../Users Module/RiverBooks.Users/RiverBooks.Users.csproj" \
+  -s "./RiverBooks.Web.csproj" \
+  -o Data/Migrations
 ```
 
 ```bash
