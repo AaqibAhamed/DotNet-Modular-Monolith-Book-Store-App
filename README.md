@@ -38,6 +38,14 @@ dotnet user-secrets --project RiverBooks.Web set \
   "Server=tcp:aaqib-dev-sql.database.windows.net,1433;Initial Catalog=Wiki-Azure-SQL;Persist Security Info=False;User ID=sqladmin;Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
 
 dotnet user-secrets --project RiverBooks.Web set \
+    "ConnectionStrings:BooksConnectionString" \
+    "Server=tcp:aaqib-dev-sql.database.windows.net,1433;Initial Catalog=Test-Azure-SQL;Persist Security Info=False;User ID=sqladmin;Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+
+dotnet user-secrets --project RiverBooks.Web set \
+    "ConnectionStrings:UsersConnectionString" \
+    "Server=tcp:aaqib-dev-sql.database.windows.net,1433;Initial Catalog=Test-Azure-SQL;Persist Security Info=False;User ID=sqladmin;Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+
+dotnet user-secrets --project RiverBooks.Web set \
   "ConnectionStrings:BooksConnectionString" \
   "Server=tcp:192.168.1.95,1433;Initial Catalog=BookDb-Windows-PC;User Id=sa;
   Password={your_password}; TrustServerCertificate=True;"
