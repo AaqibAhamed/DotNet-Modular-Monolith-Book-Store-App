@@ -6,12 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-<ItemGroup>
-   <FrameworkReference Include="Microsoft.AspNetCore.App" />
-</ItemGroup>
-
-<ItemGroup>
-  <PackageReference Include="FastEndpoints" Version="8.3.0-beta.9" />
-</ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Ardalis.Result" Version="10.1.0" />
+    <PackageReference Include="MediatR" Version="14.2.0" />
+  </ItemGroup>
 
 </Project>

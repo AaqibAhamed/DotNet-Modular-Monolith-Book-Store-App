@@ -1,6 +1,103 @@
-@RiverBooks_Web_HostAddress = http://localhost:5104
+@RiverBooks_Web_HostAddress = https://localhost:7094
 
 GET {{RiverBooks_Web_HostAddress}}/books/
 Accept: application/json
+
+###
+
+@BookId =e4fa19bf-6981-4e50-a542-7c9b26e9ec31
+GET {{RiverBooks_Web_HostAddress}}/books/{{BookId}}
+Accept: application/json
+
+###
+
+POST {{RiverBooks_Web_HostAddress}}/books
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": "e4fa19bf-6981-4e50-a542-7c9b26e9ec99",
+  "title": "Boook from Test DB",
+  "author": "S.A.AAQIB",
+  "price": 99.99
+}
+
+###
+# Test the location header
+GET {{RiverBooks_Web_HostAddress}}/books/b89f6cd7-4693-457b-9009-02205dbbfe45
+Accept: application/json
+
+###
+
+POST {{RiverBooks_Web_HostAddress}}/books
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": "b89f6cd8-4693-457b-9008-02205dbbfe47",
+  "title": "Modular Monoliths - Getting Started",
+  "author": "Aaqib Smith",
+  "price": 29.99
+}
+
+###
+
+DELETE {{RiverBooks_Web_HostAddress}}/books/b89f6cd7-4693-457b-9009-02205dbbfe47
+Accept: application/json
+
+###
+POST {{RiverBooks_Web_HostAddress}}/books/e4fa19bf-6981-4e50-a542-7c9b26e9ec31/pricehistory
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": "e4fa19bf-6981-4e50-a542-7c9b26e9ec31",
+  "newPrice": 8.99
+}
+
+###
+
+POST {{RiverBooks_Web_HostAddress}}/users
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email":"aaqib@dev.com",
+  "password":"Pass@word1"
+}
+
+
+###
+
+POST {{RiverBooks_Web_HostAddress}}/users/login
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email":"aaqib@dev.com",
+  "password":"Pass@word1"
+}
+
+###
+
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3OTA4MjUyNjYsImlhdCI6MTc5MDczODg2NiwiRW1haWxBZGRyZXNzIjoiYWFxaWJAZGV2LmNvbSIsIm5iZiI6MTc5MDczODg2Nn0.BkVaGcS3TgGsUCeij6rosyyFOQwdKfS2Y9b3N2uFHDo
+
+# Add item to cart
+POST {{RiverBooks_Web_HostAddress}}/cart
+Accept: text/plain
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "bookId":"17c61e41-3953-42cd-8f88-d3f698869b35",
+  "quantity":2
+}
+
+###
+
+# List items in cart
+GET {{RiverBooks_Web_HostAddress}}/cart
+Accept: application/json
+Authorization: Bearer {{token}}
 
 ###
