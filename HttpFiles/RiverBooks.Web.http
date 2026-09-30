@@ -16,10 +16,10 @@ Accept: application/json
 Content-Type: application/json
 
 {
-  "id": "b89f6cd7-4693-457b-9009-02205dbbfe47",
-  "title": "Modular Monoliths - Getting Started",
-  "author": "Steve Smith",
-  "price": 29.99
+  "id": "e4fa19bf-6981-4e50-a542-7c9b26e9ec99",
+  "title": "Boook from Test DB",
+  "author": "S.A.AAQIB",
+  "price": 99.99
 }
 
 ###
@@ -42,16 +42,16 @@ Content-Type: application/json
 
 ###
 
-DELETE {{RiverBooks_Web_HostAddress}}/books/b89f6cd7-4693-457b-9009-02205dbbfe49
+DELETE {{RiverBooks_Web_HostAddress}}/books/b89f6cd7-4693-457b-9009-02205dbbfe47
 Accept: application/json
 
 ###
-POST {{RiverBooks_Web_HostAddress}}/books/b89f6cd7-4693-457b-9009-02205dbbfe45/pricehistory
+POST {{RiverBooks_Web_HostAddress}}/books/e4fa19bf-6981-4e50-a542-7c9b26e9ec31/pricehistory
 Accept: application/json
 Content-Type: application/json
 
 {
-  "id": "b89f6cd8-4693-457b-9008-02205dbbfe47",
+  "id": "e4fa19bf-6981-4e50-a542-7c9b26e9ec31",
   "newPrice": 8.99
 }
 
@@ -62,7 +62,7 @@ Accept: application/json
 Content-Type: application/json
 
 {
-  "email":"steve@test.com",
+  "email":"aaqib@dev.com",
   "password":"Pass@word1"
 }
 
@@ -74,13 +74,13 @@ Accept: application/json
 Content-Type: application/json
 
 {
-  "email":"steve@test.com",
+  "email":"aaqib@dev.com",
   "password":"Pass@word1"
 }
 
 ###
 
-@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3OTA3NDc0NDksImlhdCI6MTc5MDY2MTA0OSwiRW1haWxBZGRyZXNzIjoic3RldmVAdGVzdC5jb20iLCJuYmYiOjE3OTA2NjEwNDl9.9Oh9d8oR52-p6nR75UYWZertaaa0ae5lRdNIjlzXVbY
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3OTA4MjUyNjYsImlhdCI6MTc5MDczODg2NiwiRW1haWxBZGRyZXNzIjoiYWFxaWJAZGV2LmNvbSIsIm5iZiI6MTc5MDczODg2Nn0.BkVaGcS3TgGsUCeij6rosyyFOQwdKfS2Y9b3N2uFHDo
 
 # Add item to cart
 POST {{RiverBooks_Web_HostAddress}}/cart
@@ -89,8 +89,8 @@ Authorization: Bearer {{token}}
 Content-Type: application/json
 
 {
-  "bookId":"b89f6cd7-4693-457b-9009-02205dbbfe45",
-  "quantity":1
+  "bookId":"17c61e41-3953-42cd-8f88-d3f698869b35",
+  "quantity":2
 }
 
 ###
