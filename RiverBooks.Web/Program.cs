@@ -46,7 +46,7 @@ builder.Services
 
 // Add Module Services
 List<Assembly> mediatRAssemblies = [typeof(Program).Assembly];
-builder.Services.AddBookServices(builder.Configuration, logger, mediatRAssemblies);
+builder.Services.AddBookModuleServices(builder.Configuration, logger, mediatRAssemblies);
 builder.Services.AddUserModuleServices(builder.Configuration, logger, mediatRAssemblies);
 
 // Set up MediatR
