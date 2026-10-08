@@ -119,17 +119,24 @@ Each module owns its migrations. Apply them independently; updating one context 
 
 ```bash
 dotnet ef database update \
-  --project "Books Module/RiverBooks.Books/RiverBooks.Books.csproj" \
-  --startup-project "RiverBooks.Web/RiverBooks.Web.csproj" \
+  --project "../Books Module/RiverBooks.Books/RiverBooks.Books.csproj" \
+  --startup-project "../RiverBooks.Web/RiverBooks.Web.csproj" \
   --context BookDbContext \
   -- --environment Testing
 
 dotnet ef database update \
-  --project "Users Module/RiverBooks.Users/RiverBooks.Users.csproj" \
-  --startup-project "RiverBooks.Web/RiverBooks.Web.csproj" \
+  --project "../Users Module/RiverBooks.Users/RiverBooks.Users.csproj" \
+  --startup-project "../RiverBooks.Web/RiverBooks.Web.csproj" \
   --context UsersDbContext \
   -- --environment Testing
+
+dotnet ef database update \
+  --project "../OrderProcessing Module/RiverBooks.OrderProcessing/RiverBooks.OrderProcessing.csproj" \
+  --startup-project "../RiverBooks.Web/RiverBooks.Web.csproj" \
+  --context OrderProcessingDbContext 
 ```
+
+
 
 Omit `-- --environment Testing` to use the default environment. Check the migrations known to each context with the same project, startup-project, context, and environment options:
 
@@ -145,9 +152,17 @@ Create a migration in the project that owns the changed model. For example, to a
 
 ```bash
 dotnet ef migrations add <MigrationName> \
-  --project "Users Module/RiverBooks.Users/RiverBooks.Users.csproj" \
+  --project "OrderProcessing Module/RiverBooks.OrderProcessing/RiverBooks.OrderProcessing.csproj" \
   --startup-project "RiverBooks.Web/RiverBooks.Web.csproj" \
-  --context UsersDbContext \
+  --context OrderProcessingDbContext \
+  --output-dir Data/Migrations
+```
+
+```bash
+dotnet ef migrations add Initial-OrderProcessing \
+  --project "../OrderProcessing Module/RiverBooks.OrderProcessing/RiverBooks.OrderProcessing.csproj" \
+  --startup-project "../RiverBooks.Web/RiverBooks.Web.csproj" \
+  --context OrderProcessingDbContext \
   --output-dir Data/Migrations
 ```
 

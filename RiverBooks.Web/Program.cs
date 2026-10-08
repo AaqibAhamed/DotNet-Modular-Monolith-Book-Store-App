@@ -4,6 +4,7 @@ using FastEndpoints.Security;
 using FastEndpoints.Swagger;
 //using Microsoft.Extensions.Configuration.Json;
 using RiverBooks.Books;
+using RiverBooks.OrderProcessing;
 using RiverBooks.Users;
 using Serilog;
 
@@ -48,6 +49,7 @@ builder.Services
 List<Assembly> mediatRAssemblies = [typeof(Program).Assembly];
 builder.Services.AddBookModuleServices(builder.Configuration, logger, mediatRAssemblies);
 builder.Services.AddUserModuleServices(builder.Configuration, logger, mediatRAssemblies);
+builder.Services.AddOrderProcessingModuleServices(builder.Configuration, logger, mediatRAssemblies);
 
 // Set up MediatR
 builder.Services.AddMediatR(config =>
