@@ -24,6 +24,7 @@
 
 <ItemGroup>
   <ProjectReference Include="../../Books Module/RiverBooks.Books.Contracts/RiverBooks.Books.Contracts.csproj" />
+  <ProjectReference Include="../../OrderProcessing Module/OrderProcessing.Contracts/OrderProcessing.Contracts.csproj" />
 </ItemGroup>
 
 </Project>

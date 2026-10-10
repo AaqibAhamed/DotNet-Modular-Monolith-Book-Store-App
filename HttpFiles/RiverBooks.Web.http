@@ -3,7 +3,7 @@
 GET {{RiverBooks_Web_HostAddress}}/books/
 Accept: application/json
 
-###
+### Books
 
 @BookId =e4fa19bf-6981-4e50-a542-7c9b26e9ec31
 GET {{RiverBooks_Web_HostAddress}}/books/{{BookId}}
@@ -55,7 +55,7 @@ Content-Type: application/json
   "newPrice": 8.99
 }
 
-###
+### Users
 
 POST {{RiverBooks_Web_HostAddress}}/users
 Accept: application/json
@@ -78,9 +78,9 @@ Content-Type: application/json
   "password":"Pass@word1"
 }
 
-###
+### Cart
 
-@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3OTA4MjUyNjYsImlhdCI6MTc5MDczODg2NiwiRW1haWxBZGRyZXNzIjoiYWFxaWJAZGV2LmNvbSIsIm5iZiI6MTc5MDczODg2Nn0.BkVaGcS3TgGsUCeij6rosyyFOQwdKfS2Y9b3N2uFHDo
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3OTE1Mzg4MDIsImlhdCI6MTc5MTQ1MjQwMiwiRW1haWxBZGRyZXNzIjoiYWFxaWJAZGV2LmNvbSIsIm5iZiI6MTc5MTQ1MjQwMn0.FHOaG091TIbCjUiHWVGW_8-S94lYuxleJbPQvY4vNrI
 
 # Add item to cart
 POST {{RiverBooks_Web_HostAddress}}/cart
@@ -97,6 +97,69 @@ Content-Type: application/json
 
 # List items in cart
 GET {{RiverBooks_Web_HostAddress}}/cart
+Accept: application/json
+Authorization: Bearer {{token}}
+
+### Orders
+
+# List All Orders
+GET {{RiverBooks_Web_HostAddress}}/orders
+Accept: application/json
+Authorization: Bearer {{token}}
+
+###
+
+# Checkout Cart
+POST {{RiverBooks_Web_HostAddress}}/cart/checkout
+Accept: application/json
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "shippingAddressId":"1184ecab-f236-43e9-a48c-a5b9bc59ad11",
+  "billingAddressId":"1184ecab-f236-43e9-a48c-a5b9bc59ad11"
+}
+
+###
+
+# List Addresses
+
+GET {{RiverBooks_Web_HostAddress}}/users/addresses
+Accept: application/json
+Authorization: Bearer {{token}}
+
+###
+
+# Add Address to User
+POST {{RiverBooks_Web_HostAddress}}/users/addresses
+Accept: application/json
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "street1": "2 Main St.",
+  "street2": "Number 722",
+  "city":"Anytown",
+  "state":"OH",
+  "postalCode":"12345-6789",
+  "country":"USA"
+}
+
+###
+
+# FLUSH CACHE
+
+POST {{RiverBooks_Web_HostAddress}}/flushcache
+Accept: application/json
+Content-Type: application/json
+{
+}
+
+###
+
+# LIST EMAILS
+
+GET {{RiverBooks_Web_HostAddress}}/emails
 Accept: application/json
 Authorization: Bearer {{token}}
 

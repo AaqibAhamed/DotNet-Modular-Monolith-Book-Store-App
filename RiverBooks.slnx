@@ -3,6 +3,7 @@
     <Project Path="Books Module/RiverBooks.Books.Contracts/RiverBooks.Books.Contracts.csproj" />
   </Folder>
   <Folder Name="/OrderProcessing Module/">
+    <Project Path="OrderProcessing Module/OrderProcessing.Contracts/OrderProcessing.Contracts.csproj" />
     <Project Path="OrderProcessing Module/RiverBooks.OrderProcessing/RiverBooks.OrderProcessing.csproj" />
   </Folder>
   <Folder Name="/Users Module/">

@@ -136,7 +136,11 @@ dotnet ef database update \
   --context OrderProcessingDbContext 
 ```
 
+```bash
+dotnet ef database update \
+  --context UsersDbContext 
 
+```
 
 Omit `-- --environment Testing` to use the default environment. Check the migrations known to each context with the same project, startup-project, context, and environment options:
 
@@ -163,6 +167,14 @@ dotnet ef migrations add Initial-OrderProcessing \
   --project "../OrderProcessing Module/RiverBooks.OrderProcessing/RiverBooks.OrderProcessing.csproj" \
   --startup-project "../RiverBooks.Web/RiverBooks.Web.csproj" \
   --context OrderProcessingDbContext \
+  --output-dir Data/Migrations
+```
+
+```bash
+dotnet ef migrations add UserAddresses \
+  --context UsersDbContext \
+  --project "../Users Module/RiverBooks.Users/RiverBooks.Users.csproj" \
+  --startup-project "../RiverBooks.Web/RiverBooks.Web.csproj" \
   --output-dir Data/Migrations
 ```
 

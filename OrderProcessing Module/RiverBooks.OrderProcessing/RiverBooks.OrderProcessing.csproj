@@ -21,6 +21,10 @@
     <PackageReference Include="StackExchange.Redis" Version="3.3.1" />
   </ItemGroup>
 
+   <ItemGroup>
+     <ProjectReference Include="../OrderProcessing.Contracts/OrderProcessing.Contracts.csproj" />
+   </ItemGroup>
+
   
   <!-- <ItemGroup>
     <ProjectReference Include="..\OrderProcessing.Contracts\RiverBooks.OrderProcessing.Contracts.csproj" />
