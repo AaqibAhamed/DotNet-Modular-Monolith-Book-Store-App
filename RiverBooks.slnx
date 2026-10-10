@@ -1,4 +1,17 @@
 <Solution>
-  <Project Path="RiverBooks.Books/RiverBooks.Books.csproj" />
+  <Folder Name="/Books Module/">
+    <Project Path="Books Module/RiverBooks.Books.Contracts/RiverBooks.Books.Contracts.csproj" />
+  </Folder>
+  <Folder Name="/OrderProcessing Module/">
+    <Project Path="OrderProcessing Module/OrderProcessing.Contracts/OrderProcessing.Contracts.csproj" />
+    <Project Path="OrderProcessing Module/RiverBooks.OrderProcessing/RiverBooks.OrderProcessing.csproj" />
+  </Folder>
+  <Folder Name="/Users Module/">
+    <Project Path="Users Module/RiverBooks.Users.Contracts/RiverBooks.Users.Contracts.csproj" />
+    <Project Path="Users Module/RiverBooks.Users.Tests/RiverBooks.Users.Tests.csproj" />
+    <Project Path="Users Module/RiverBooks.Users/RiverBooks.Users.csproj" />
+  </Folder>
+  <Project Path="Books Module/RiverBooks.Books.Tests/RiverBooks.Books.Tests.csproj" />
+  <Project Path="Books Module/RiverBooks.Books/RiverBooks.Books.csproj" />
   <Project Path="RiverBooks.Web/RiverBooks.Web.csproj" />
 </Solution>
