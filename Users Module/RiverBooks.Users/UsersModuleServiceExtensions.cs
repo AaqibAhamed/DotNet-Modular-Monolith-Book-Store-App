@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using RiverBooks.SharedKernel;
 using RiverBooks.Users.Data;
 using RiverBooks.Users.Infrastructure.Data;
+using RiverBooks.Users.Interfaces;
 using Serilog;
 
 
@@ -21,6 +22,8 @@ public static class UsersModuleServiceExtensions
 
     // Add User Services
     services.AddScoped<IApplicationUserRepository, EfApplicationUserRepository>();
+    services.AddScoped<IReadOnlyUserStreetAddressRepository, EfUserStreetAddressRepository>();
+
 
     // Add MediatR Domain Event Dispatcher
     services.AddScoped<IDomainEventDispatcher, MediatRDomainEventDispatcher>();

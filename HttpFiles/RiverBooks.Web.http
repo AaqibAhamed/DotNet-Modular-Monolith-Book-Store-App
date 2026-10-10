@@ -152,6 +152,7 @@ Content-Type: application/json
 POST {{RiverBooks_Web_HostAddress}}/flushcache
 Accept: application/json
 Content-Type: application/json
+
 {
 }
 

@@ -19,8 +19,7 @@ internal class AddressCacheUpdatingNewUserAddressHandler : INotificationHandler<
     _logger = logger;
   }
 
-  public async Task Handle(NewUserAddressAddedIntegrationEvent notification,
-    CancellationToken ct)
+  public async Task Handle(NewUserAddressAddedIntegrationEvent notification, CancellationToken ct)
   {
     var orderAddress = new OrderAddress(notification.Details.AddressId,
       new Address(notification.Details.Street1,

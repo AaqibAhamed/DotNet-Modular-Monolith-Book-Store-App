@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using RiverBooks.OrderProcessing.Infrastructure;
 using RiverBooks.OrderProcessing.Infrastructure.Data;
 using RiverBooks.OrderProcessing.Interfaces;
 using Serilog;
@@ -20,7 +21,8 @@ public static class OrderProcessingModuleServiceExtensions
 
     // Add User Services
     services.AddScoped<IOrderRepository, EfOrderRepository>();
-    services.AddScoped<IOrderAddressCache, RedisOrderAddressCache>();
+    services.AddScoped<RedisOrderAddressCache>();//IOrderAddressCache interface not required since ReadThroughOrderAddressCache require RedisOrderAddressCache through IOrderAddressCache
+    services.AddScoped<IOrderAddressCache, ReadThroughOrderAddressCache>();
 
     // if using MediatR in this module, add any assemblies that contain handlers to the list
     mediatRAssemblies.Add(typeof(OrderProcessingModuleServiceExtensions).Assembly);
