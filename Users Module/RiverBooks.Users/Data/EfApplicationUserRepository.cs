@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using RiverBooks.Users.Infrastructure.Data;
 
 namespace RiverBooks.Users.Data;
 

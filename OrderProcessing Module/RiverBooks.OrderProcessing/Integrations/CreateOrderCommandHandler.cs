@@ -11,13 +11,13 @@ internal class CreateOrderCommandHandler : IRequestHandler<CreateOrderCommand, R
 {
   private readonly IOrderRepository _orderRepository;
   private readonly ILogger<CreateOrderCommandHandler> _logger;
-  //private readonly IOrderAddressCache _addressCache;
+  private readonly IOrderAddressCache _addressCache;
 
-  public CreateOrderCommandHandler(IOrderRepository orderRepository, ILogger<CreateOrderCommandHandler> logger)
+  public CreateOrderCommandHandler(IOrderRepository orderRepository, ILogger<CreateOrderCommandHandler> logger, IOrderAddressCache addressCache)
   {
     _orderRepository = orderRepository;
     _logger = logger;
-    // _addressCache = addressCache;
+    _addressCache = addressCache;
   }
 
   public async Task<Result<OrderDetailsResponse>> Handle(CreateOrderCommand request, CancellationToken cancellationToken)
@@ -25,16 +25,16 @@ internal class CreateOrderCommandHandler : IRequestHandler<CreateOrderCommand, R
     var items = request.OrderItems.Select(oi => new OrderItem(
       oi.BookId, oi.Quantity, oi.UnitPrice, oi.Description));
 
-    // var shippingAddress = await _addressCache.GetByIdAsync(request.ShippingAddressId);
-    // var billingAddress = await _addressCache.GetByIdAsync(request.BillingAddressId);
+    var shippingAddress = await _addressCache.GetByIdAsync(request.ShippingAddressId);
+    var billingAddress = await _addressCache.GetByIdAsync(request.BillingAddressId);
 
-    var shippingAddress = new Address("No 123", "", "Bekham", "NJ", "123", "UK");
+    // var shippingAddress = new Address("No 123", "", "Bekham", "NJ", "123", "UK");
+    // var billingAddress = shippingAddress;
 
-    var billingAddress = shippingAddress;
-
-    var newOrder = Order.Factory.Create(request.UserId, shippingAddress, billingAddress, items
-      //shippingAddress.Value.Address,
-      // billingAddress.Value.Address,
+    var newOrder = Order.Factory.Create(request.UserId,
+      shippingAddress.Value.Address,
+      billingAddress.Value.Address,
+      items
       );
 
     await _orderRepository.AddAsync(newOrder);

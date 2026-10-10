@@ -189,3 +189,9 @@ dotnet test RiverBooks.slnx
 ```
 
 The test projects target xUnit. Keep tests independent of external SQL Server services unless a test is explicitly intended to exercise database integration.
+
+
+## Redis
+docker run --name wiki-redis -p 6379:6379 -d redis 
+
+docker ps

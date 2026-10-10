@@ -1,16 +1,28 @@
-﻿using Ardalis.GuardClauses;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using Ardalis.GuardClauses;
 using Microsoft.AspNetCore.Identity;
+using RiverBooks.SharedKernel;
+using RiverBooks.Users.Domain;
 
 namespace RiverBooks.Users;
 
-public partial class ApplicationUser : IdentityUser
+public partial class ApplicationUser : IdentityUser, IHaveDomainEvents
 {
   public string CustomerFullName { get; set; } = string.Empty;
+
   private readonly List<CartItem> _cartItems = [];
   public IReadOnlyCollection<CartItem> CartItems => _cartItems.AsReadOnly();
 
-  private readonly List<UserStreetAddress> _addresses = new();
+  private readonly List<UserStreetAddress> _addresses = [];
   public IReadOnlyCollection<UserStreetAddress> Addresses => _addresses.AsReadOnly();
+
+  private List<DomainEventBase> _domainEvents = [];
+
+  [NotMapped]
+  public IEnumerable<DomainEventBase> DomainEvents => _domainEvents.AsReadOnly();
+
+  protected void RegisterDomainEvent(DomainEventBase domainEvent) => _domainEvents.Add(domainEvent);
+  void IHaveDomainEvents.ClearDomainEvents() => _domainEvents.Clear();
 
   public void AddItemToCart(CartItem item)
   {
@@ -44,9 +56,9 @@ public partial class ApplicationUser : IdentityUser
     var newAddress = new UserStreetAddress(Id, address);
     _addresses.Add(newAddress);
 
+    var domainEvent = new AddressAddedEvent(newAddress);
 
-    // var domainEvent = new AddressAddedEvent(newAddress);
-    // RegisterDomainEvent(domainEvent);
+    RegisterDomainEvent(domainEvent);
 
     return newAddress;
   }

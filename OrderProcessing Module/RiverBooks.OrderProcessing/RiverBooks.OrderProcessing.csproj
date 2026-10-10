@@ -10,7 +10,7 @@
     <PackageReference Include="Ardalis.GuardClauses" Version="5.0.0" />
     <PackageReference Include="Ardalis.Result" Version="10.1.0" />
     <PackageReference Include="FastEndpoints" Version="8.3.0" />
-    <PackageReference Include="FastEndpoints.Security" Version="5.22.0" />
+    <PackageReference Include="FastEndpoints.Security" Version="8.3.0" />
     <PackageReference Include="MediatR" Version="14.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="10.0.12" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.12" />
@@ -18,10 +18,11 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.12" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.12" />
     <PackageReference Include="Serilog.AspNetCore" Version="10.0.0" />
-    <PackageReference Include="StackExchange.Redis" Version="3.3.1" />
+    <PackageReference Include="StackExchange.Redis" Version="3.4.0" />
   </ItemGroup>
 
    <ItemGroup>
+     <ProjectReference Include="../../Users Module/RiverBooks.Users.Contracts/RiverBooks.Users.Contracts.csproj" />
      <ProjectReference Include="../OrderProcessing.Contracts/OrderProcessing.Contracts.csproj" />
    </ItemGroup>
 

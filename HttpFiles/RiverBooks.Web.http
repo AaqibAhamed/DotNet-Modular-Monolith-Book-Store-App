@@ -80,7 +80,7 @@ Content-Type: application/json
 
 ### Cart
 
-@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3OTE1Mzg4MDIsImlhdCI6MTc5MTQ1MjQwMiwiRW1haWxBZGRyZXNzIjoiYWFxaWJAZGV2LmNvbSIsIm5iZiI6MTc5MTQ1MjQwMn0.FHOaG091TIbCjUiHWVGW_8-S94lYuxleJbPQvY4vNrI
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3OTE3MzI5MTMsImlhdCI6MTc5MTY0NjUxMywiRW1haWxBZGRyZXNzIjoiYWFxaWJAZGV2LmNvbSIsIm5iZiI6MTc5MTY0NjUxM30.oR3-AjY-_S911cR3Uj7JeY_wj78dsOgNjbtPYx19tAQ
 
 # Add item to cart
 POST {{RiverBooks_Web_HostAddress}}/cart
@@ -116,8 +116,8 @@ Authorization: Bearer {{token}}
 Content-Type: application/json
 
 {
-  "shippingAddressId":"1184ecab-f236-43e9-a48c-a5b9bc59ad11",
-  "billingAddressId":"1184ecab-f236-43e9-a48c-a5b9bc59ad11"
+  "shippingAddressId":"18badafa-4c44-4d63-a09a-10a663b2d751",
+  "billingAddressId":"18badafa-4c44-4d63-a09a-10a663b2d751"
 }
 
 ###
@@ -137,7 +137,7 @@ Authorization: Bearer {{token}}
 Content-Type: application/json
 
 {
-  "street1": "2 Main St.",
+  "street1": "1234 Main St.",
   "street2": "Number 722",
   "city":"Anytown",
   "state":"OH",

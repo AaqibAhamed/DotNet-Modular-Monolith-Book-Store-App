@@ -20,6 +20,7 @@ public static class OrderProcessingModuleServiceExtensions
 
     // Add User Services
     services.AddScoped<IOrderRepository, EfOrderRepository>();
+    services.AddScoped<IOrderAddressCache, RedisOrderAddressCache>();
 
     // if using MediatR in this module, add any assemblies that contain handlers to the list
     mediatRAssemblies.Add(typeof(OrderProcessingModuleServiceExtensions).Assembly);
