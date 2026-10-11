@@ -1,9 +1,10 @@
 ﻿using Ardalis.Result;
 using MediatR;
 using Microsoft.Extensions.Logging;
+using RiverBooks.Users.Interfaces;
 using static RiverBooks.Users.ApplicationUser;
 
-namespace RiverBooks.Users.UseCases.User.AddAddress;
+namespace RiverBooks.Users.UseCases.User;
 
 internal class AddAddressToUserHandler : IRequestHandler<AddAddressToUserCommand, Result>
 {

@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using System.Reflection;
-using RiverBooks.Users.Domain;
 using RiverBooks.SharedKernel;
 using static RiverBooks.Users.ApplicationUser;
 

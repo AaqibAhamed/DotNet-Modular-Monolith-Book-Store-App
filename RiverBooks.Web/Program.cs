@@ -5,6 +5,7 @@ using FastEndpoints.Swagger;
 //using Microsoft.Extensions.Configuration.Json;
 using RiverBooks.Books;
 using RiverBooks.OrderProcessing;
+using RiverBooks.SharedKernel;
 using RiverBooks.Users;
 using Serilog;
 
@@ -54,6 +55,9 @@ builder.Services.AddOrderProcessingModuleServices(builder.Configuration, logger,
 // Set up MediatR
 builder.Services.AddMediatR(config =>
                   config.RegisterServicesFromAssemblies(mediatRAssemblies.ToArray()));
+
+// Add MediatR Domain Event Dispatcher
+builder.Services.AddScoped<IDomainEventDispatcher, MediatRDomainEventDispatcher>();
 
 var app = builder.Build();
 

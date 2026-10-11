@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-
-
+﻿
 namespace RiverBooks.OrderProcessing.Domain;
 
 internal class Order

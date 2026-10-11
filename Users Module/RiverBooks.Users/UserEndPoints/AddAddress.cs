@@ -3,7 +3,6 @@ using System.Security.Claims;
 using FastEndpoints;
 using MediatR;
 using RiverBooks.Users.UseCases.User;
-using RiverBooks.Users.UseCases.User.AddAddress;
 
 namespace RiverBooks.Users.UserEndpoints;
 

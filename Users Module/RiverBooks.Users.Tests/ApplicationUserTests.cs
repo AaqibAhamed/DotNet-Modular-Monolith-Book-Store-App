@@ -1,4 +1,6 @@
-﻿namespace RiverBooks.Users.Tests;
+﻿using RiverBooks.Users.Domain;
+
+namespace RiverBooks.Users.Tests;
 
 public class ApplicationUserTests
 {

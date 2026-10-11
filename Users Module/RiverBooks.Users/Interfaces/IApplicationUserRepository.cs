@@ -1,4 +1,4 @@
-﻿namespace RiverBooks.Users;
+﻿namespace RiverBooks.Users.Interfaces;
 
 public interface IApplicationUserRepository
 {

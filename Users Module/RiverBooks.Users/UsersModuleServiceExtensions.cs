@@ -2,7 +2,6 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using RiverBooks.SharedKernel;
-using RiverBooks.Users.Data;
 using RiverBooks.Users.Infrastructure.Data;
 using RiverBooks.Users.Interfaces;
 using Serilog;
@@ -25,8 +24,8 @@ public static class UsersModuleServiceExtensions
     services.AddScoped<IReadOnlyUserStreetAddressRepository, EfUserStreetAddressRepository>();
 
 
-    // Add MediatR Domain Event Dispatcher
-    services.AddScoped<IDomainEventDispatcher, MediatRDomainEventDispatcher>();
+    // Add MediatR Domain Event Dispatcher -moved to program.cs because common property -Used by other modules as well.
+    // services.AddScoped<IDomainEventDispatcher, MediatRDomainEventDispatcher>();
 
     // if using MediatR in this module, add any assemblies that contain handlers to the list
     mediatRAssemblies.Add(typeof(UsersModuleServiceExtensions).Assembly);

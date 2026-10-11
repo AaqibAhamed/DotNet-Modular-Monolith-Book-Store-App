@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using RiverBooks.Users.Domain;
 using RiverBooks.Users.Interfaces;
 using static RiverBooks.Users.ApplicationUser;
 

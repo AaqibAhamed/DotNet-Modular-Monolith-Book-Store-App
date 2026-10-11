@@ -1,8 +1,9 @@
 ﻿using Ardalis.Result;
 using MediatR;
+using RiverBooks.Users.Interfaces;
 using RiverBooks.Users.UserEndpoints;
 
-namespace RiverBooks.Users.UseCases.User.ListAddresses;
+namespace RiverBooks.Users.UseCases.User;
 
 internal class ListAddressesQueryHandler : IRequestHandler<ListAddressesQuery, Result<List<UserAddressDto>>>
 {
