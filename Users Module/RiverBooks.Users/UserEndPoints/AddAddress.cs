@@ -2,7 +2,7 @@
 using System.Security.Claims;
 using FastEndpoints;
 using MediatR;
-using RiverBooks.Users.UseCases.User;
+using RiverBooks.Users.UseCases.User.AddAddress;
 
 namespace RiverBooks.Users.UserEndpoints;
 
@@ -37,11 +37,11 @@ internal sealed class AddAddress : Endpoint<AddAddressRequest>
 
     if (result.Status == ResultStatus.Unauthorized)
     {
-      await Send.UnauthorizedAsync();
+      await Send.UnauthorizedAsync(cancellationToken);
     }
     else
     {
-      await Send.OkAsync();
+      await Send.OkAsync(cancellationToken);
     }
   }
 }

@@ -19,7 +19,10 @@
 
   <ItemGroup>
     <ProjectReference Include="../Books Module/RiverBooks.Books/RiverBooks.Books.csproj" />
-    <ProjectReference Include="../OrderProcessing Module/RiverBooks.OrderProcessing/RiverBooks.OrderProcessing.csproj" />
+    <ProjectReference
+      Include="../OrderProcessing Module/RiverBooks.OrderProcessing/RiverBooks.OrderProcessing.csproj" />
+    <ProjectReference
+      Include="../RiverBooks.EmailSending/RiverBooks.EmailSending/RiverBooks.EmailSending.csproj" />
     <ProjectReference Include="../Users Module/RiverBooks.Users/RiverBooks.Users.csproj" />
   </ItemGroup>
 

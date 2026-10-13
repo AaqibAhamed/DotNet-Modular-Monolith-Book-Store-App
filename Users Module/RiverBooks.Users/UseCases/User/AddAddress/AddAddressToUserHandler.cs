@@ -1,18 +1,18 @@
 ﻿using Ardalis.Result;
 using MediatR;
 using Microsoft.Extensions.Logging;
+using RiverBooks.Users.Domain;
 using RiverBooks.Users.Interfaces;
 using static RiverBooks.Users.ApplicationUser;
 
-namespace RiverBooks.Users.UseCases.User;
+namespace RiverBooks.Users.UseCases.User.AddAddress;
 
 internal class AddAddressToUserHandler : IRequestHandler<AddAddressToUserCommand, Result>
 {
   private readonly IApplicationUserRepository _userRepository;
   private readonly ILogger<AddAddressToUserHandler> _logger;
 
-  public AddAddressToUserHandler(IApplicationUserRepository userRepository,
-    ILogger<AddAddressToUserHandler> logger)
+  public AddAddressToUserHandler(IApplicationUserRepository userRepository, ILogger<AddAddressToUserHandler> logger)
   {
     _userRepository = userRepository;
     _logger = logger;

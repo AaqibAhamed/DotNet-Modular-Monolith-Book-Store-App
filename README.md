@@ -191,7 +191,14 @@ dotnet test RiverBooks.slnx
 The test projects target xUnit. Keep tests independent of external SQL Server services unless a test is explicitly intended to exercise database integration.
 
 
-## Redis
+## Redis via Docker
 docker run --name wiki-redis -p 6379:6379 -d redis 
 
 docker ps
+
+## Email server via Docker
+Legacy image 
+docker run --name=papercut -p 25:25 -p 37408:37408 jijiechen/papercut:latest -d  
+
+New Recommended image
+docker run -d -p 8080:8080 -p 2525:2525 changemakerstudiosus/papercut-smtp:latest

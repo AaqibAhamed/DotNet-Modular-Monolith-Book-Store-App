@@ -6,6 +6,10 @@
     <Project Path="OrderProcessing Module/OrderProcessing.Contracts/OrderProcessing.Contracts.csproj" />
     <Project Path="OrderProcessing Module/RiverBooks.OrderProcessing/RiverBooks.OrderProcessing.csproj" />
   </Folder>
+  <Folder Name="/RiverBooks.EmailSending/">
+    <Project Path="RiverBooks.EmailSending/RiverBooks.EmailSending.Contracts/RiverBooks.EmailSending.Contracts.csproj" />
+    <Project Path="RiverBooks.EmailSending/RiverBooks.EmailSending/RiverBooks.EmailSending.csproj" />
+  </Folder>
   <Folder Name="/Users Module/">
     <Project Path="Users Module/RiverBooks.Users.Contracts/RiverBooks.Users.Contracts.csproj" />
     <Project Path="Users Module/RiverBooks.Users.Tests/RiverBooks.Users.Tests.csproj" />
