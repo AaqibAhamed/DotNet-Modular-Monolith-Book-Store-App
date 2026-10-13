@@ -196,9 +196,9 @@ docker run --name wiki-redis -p 6379:6379 -d redis
 
 docker ps
 
-## Email server via Docker
+## Papercut Email server via Docker
 Legacy image 
 docker run --name=papercut -p 25:25 -p 37408:37408 jijiechen/papercut:latest -d  
 
 New Recommended image
-docker run -d -p 8080:8080 -p 2525:2525 changemakerstudiosus/papercut-smtp:latest
+docker run -d --name=papercut-new -p 8080:8080 -p 2525:2525 changemakerstudiosus/papercut-smtp:latest

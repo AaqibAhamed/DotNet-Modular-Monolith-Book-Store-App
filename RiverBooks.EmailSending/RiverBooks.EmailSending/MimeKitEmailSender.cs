@@ -19,7 +19,7 @@ public class MimeKitEmailSender : ISendEmail
 
     using (var client = new SmtpClient()) // use localhost and a test server
     {
-      client.Connect(Constants.EMAIL_SERVER, 25, false); // TODO: fetch from config
+      client.Connect(Constants.EMAIL_SERVER, 2525, false); // TODO: fetch from config //2525 new papercut image
       var message = new MimeMessage();
       message.From.Add(new MailboxAddress(from, from));
       message.To.Add(new MailboxAddress(to, to));
