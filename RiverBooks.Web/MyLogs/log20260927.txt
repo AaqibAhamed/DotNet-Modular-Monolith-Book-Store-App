@@ -1,0 +1,20 @@
+2026-09-27 06:56:01.808 +05:30 [INF] Registered 5 endpoints in 132 milliseconds.
+2026-09-27 06:56:01.833 +05:30 [INF] Now listening on: http://localhost:5104
+2026-09-27 06:56:01.834 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-27 06:56:01.834 +05:30 [INF] Hosting environment: Development
+2026-09-27 06:56:01.834 +05:30 [INF] Content root path: /Volumes/My Files/Projects/Modul-Monolith-DotNet/src/RiverBooks.Web
+2026-09-27 07:04:41.885 +05:30 [INF] Registered 5 endpoints in 169 milliseconds.
+2026-09-27 07:04:41.913 +05:30 [INF] Now listening on: http://localhost:5104
+2026-09-27 07:04:41.914 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-27 07:04:41.914 +05:30 [INF] Hosting environment: Development
+2026-09-27 07:04:41.914 +05:30 [INF] Content root path: /Volumes/My Files/Projects/Modul-Monolith-DotNet/src/RiverBooks.Web
+2026-09-27 07:05:45.111 +05:30 [INF] Registered 5 endpoints in 152 milliseconds.
+2026-09-27 07:05:45.134 +05:30 [INF] Now listening on: http://localhost:5104
+2026-09-27 07:05:45.135 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-27 07:05:45.135 +05:30 [INF] Hosting environment: Development
+2026-09-27 07:05:45.135 +05:30 [INF] Content root path: /Volumes/My Files/Projects/Modul-Monolith-DotNet/src/RiverBooks.Web
+2026-09-27 07:06:19.700 +05:30 [INF] Registered 5 endpoints in 146 milliseconds.
+2026-09-27 07:06:19.724 +05:30 [INF] Now listening on: http://localhost:5104
+2026-09-27 07:06:19.725 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-27 07:06:19.725 +05:30 [INF] Hosting environment: Development
+2026-09-27 07:06:19.725 +05:30 [INF] Content root path: /Volumes/My Files/Projects/Modul-Monolith-DotNet/src/RiverBooks.Web

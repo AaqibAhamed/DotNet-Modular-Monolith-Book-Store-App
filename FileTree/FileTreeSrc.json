@@ -1,0 +1,259 @@
+{
+  "name": "src",
+  "path": "/Volumes/My Files/Projects/Modul-Monolith-DotNet/src",
+  "type": "directory",
+  "children": [
+    {
+      "name": "BrunoFiles",
+      "type": "folder",
+      "icon": "📁",
+      "children": [
+        {
+          "name": "RiverBooks.Web - v1",
+          "type": "folder",
+          "icon": "📁",
+          "children": [
+            {
+              "name": "RiverBooks_Web",
+              "type": "folder",
+              "icon": "📁",
+              "children": [
+                {
+                  "name": "folder.bru",
+                  "type": "file",
+                  "icon": "📄"
+                },
+                {
+                  "name": "get -books.bru",
+                  "type": "file",
+                  "icon": "📄"
+                }
+              ]
+            },
+            {
+              "name": "environments",
+              "type": "folder",
+              "icon": "📁",
+              "children": [
+                {
+                  "name": "Environment 1.bru",
+                  "type": "file",
+                  "icon": "📄"
+                }
+              ]
+            },
+            {
+              "name": "bruno.json",
+              "type": "file",
+              "icon": "⚙️"
+            },
+            {
+              "name": "collection.bru",
+              "type": "file",
+              "icon": "📄"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "HttpFiles",
+      "type": "folder",
+      "icon": "📁",
+      "children": [
+        {
+          "name": "RiverBooks.Web.http",
+          "type": "file",
+          "icon": "📄"
+        },
+        {
+          "name": "v1.json",
+          "type": "file",
+          "icon": "⚙️"
+        }
+      ]
+    },
+    {
+      "name": "RiverBooks.Books",
+      "type": "folder",
+      "icon": "📁",
+      "children": [
+        {
+          "name": "Data",
+          "type": "folder",
+          "icon": "📁",
+          "children": [
+            {
+              "name": "Migrations",
+              "type": "folder",
+              "icon": "📁",
+              "children": [
+                {
+                  "name": "20260906055157_Initial-Migration.Designer.cs",
+                  "type": "file",
+                  "icon": "📄"
+                },
+                {
+                  "name": "20260906055157_Initial-Migration.cs",
+                  "type": "file",
+                  "icon": "📄"
+                },
+                {
+                  "name": "BookDbContextModelSnapshot.cs",
+                  "type": "file",
+                  "icon": "📄"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Book.cs",
+          "type": "file",
+          "icon": "📄"
+        },
+        {
+          "name": "BookConfiguration.cs",
+          "type": "file",
+          "icon": "📄"
+        },
+        {
+          "name": "BookDbContext.cs",
+          "type": "file",
+          "icon": "📄"
+        },
+        {
+          "name": "BookDto.cs",
+          "type": "file",
+          "icon": "📄"
+        },
+        {
+          "name": "BookService.cs",
+          "type": "file",
+          "icon": "📄"
+        },
+        {
+          "name": "BookServiceExtentions.cs",
+          "type": "file",
+          "icon": "📄"
+        },
+        {
+          "name": "DataSchemaConstants.cs",
+          "type": "file",
+          "icon": "📄"
+        },
+        {
+          "name": "EfBookRepository.cs",
+          "type": "file",
+          "icon": "📄"
+        },
+        {
+          "name": "IBookRepository.cs",
+          "type": "file",
+          "icon": "📄"
+        },
+        {
+          "name": "IBookService.cs",
+          "type": "file",
+          "icon": "📄"
+        },
+        {
+          "name": "IReadOnlyBookRepository.cs",
+          "type": "file",
+          "icon": "📄"
+        },
+        {
+          "name": "ListBookEndpoint.cs",
+          "type": "file",
+          "icon": "📄"
+        },
+        {
+          "name": "ListBooksResponse.cs",
+          "type": "file",
+          "icon": "📄"
+        },
+        {
+          "name": "RiverBooks.Books.csproj",
+          "type": "file",
+          "icon": "📄"
+        }
+      ]
+    },
+    {
+      "name": "RiverBooks.Web",
+      "type": "folder",
+      "icon": "📁",
+      "children": [
+        {
+          "name": "Properties",
+          "type": "folder",
+          "icon": "📁",
+          "children": [
+            {
+              "name": "launchSettings.json",
+              "type": "file",
+              "icon": "⚙️"
+            }
+          ]
+        },
+        {
+          "name": "Program.cs",
+          "type": "file",
+          "icon": "📄"
+        },
+        {
+          "name": "RiverBooks.Web.csproj",
+          "type": "file",
+          "icon": "📄"
+        },
+        {
+          "name": "appsettings.Development.json",
+          "type": "file",
+          "icon": "⚙️"
+        },
+        {
+          "name": "appsettings.json",
+          "type": "file",
+          "icon": "⚙️"
+        }
+      ]
+    },
+    {
+      "name": "# File Tree: src.md",
+      "type": "file",
+      "icon": "📝"
+    },
+    {
+      "name": ".editorconfig",
+      "type": "file",
+      "icon": "📄"
+    },
+    {
+      "name": ".gitignore",
+      "type": "file",
+      "icon": "📁"
+    },
+    {
+      "name": "Directory.Build.props",
+      "type": "file",
+      "icon": "📄"
+    },
+    {
+      "name": "README.md",
+      "type": "file",
+      "icon": "📝"
+    },
+    {
+      "name": "RiverBooks.slnx",
+      "type": "file",
+      "icon": "📄"
+    }
+  ],
+  "metadata": {
+    "generated": "2026-09-18T08:47:46.958Z",
+    "generator": "FileTree Pro Extension",
+    "version": "0.2.0",
+    "showIcons": true,
+    "maxDepth": 15
+  }
+}
