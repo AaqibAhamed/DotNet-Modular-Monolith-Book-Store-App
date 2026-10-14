@@ -2,13 +2,13 @@
   <Folder Name="/Books Module/">
     <Project Path="Books Module/RiverBooks.Books.Contracts/RiverBooks.Books.Contracts.csproj" />
   </Folder>
+  <Folder Name="/EmailSending Module/">
+    <Project Path="EmailSending Module/RiverBooks.EmailSending.Contracts/RiverBooks.EmailSending.Contracts.csproj" />
+    <Project Path="EmailSending Module/RiverBooks.EmailSending/RiverBooks.EmailSending.csproj" />
+  </Folder>
   <Folder Name="/OrderProcessing Module/">
     <Project Path="OrderProcessing Module/OrderProcessing.Contracts/OrderProcessing.Contracts.csproj" />
     <Project Path="OrderProcessing Module/RiverBooks.OrderProcessing/RiverBooks.OrderProcessing.csproj" />
-  </Folder>
-  <Folder Name="/RiverBooks.EmailSending/">
-    <Project Path="RiverBooks.EmailSending/RiverBooks.EmailSending.Contracts/RiverBooks.EmailSending.Contracts.csproj" />
-    <Project Path="RiverBooks.EmailSending/RiverBooks.EmailSending/RiverBooks.EmailSending.csproj" />
   </Folder>
   <Folder Name="/Users Module/">
     <Project Path="Users Module/RiverBooks.Users.Contracts/RiverBooks.Users.Contracts.csproj" />

@@ -80,7 +80,7 @@ Content-Type: application/json
 
 ### Cart
 
-@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3OTIwMjgyODYsImlhdCI6MTc5MTk0MTg4NiwiRW1haWxBZGRyZXNzIjoiYWFxaWIyQGRldi5jb20iLCJuYmYiOjE3OTE5NDE4ODZ9.UAqUtxLICAwnUjpu1zeBRDDxB9meHeFpbLJLlZ3sbnk
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3OTIwMzAzNjMsImlhdCI6MTc5MTk0Mzk2MywiRW1haWxBZGRyZXNzIjoiYWFxaWIyQGRldi5jb20iLCJuYmYiOjE3OTE5NDM5NjN9.58m6w19-pFngYrRW3HCD667K9_sqmOLP3pPIlcDohFM
 
 # Add item to cart
 POST {{RiverBooks_Web_HostAddress}}/cart

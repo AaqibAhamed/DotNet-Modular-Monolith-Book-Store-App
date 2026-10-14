@@ -22,7 +22,7 @@
   </ItemGroup>
 
    <ItemGroup>
-     <ProjectReference Include="../../RiverBooks.EmailSending/RiverBooks.EmailSending.Contracts/RiverBooks.EmailSending.Contracts.csproj" />
+     <ProjectReference Include="../../EmailSending Module/RiverBooks.EmailSending.Contracts/RiverBooks.EmailSending.Contracts.csproj" />
      <ProjectReference Include="../../Users Module/RiverBooks.Users.Contracts/RiverBooks.Users.Contracts.csproj" />
      <ProjectReference Include="../OrderProcessing.Contracts/OrderProcessing.Contracts.csproj" />
    </ItemGroup>
